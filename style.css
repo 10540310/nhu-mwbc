@@ -51,7 +51,11 @@ nav a:hover{
 
 .hero{
     text-align:center;
-    padding:100px 20px;
+    padding:120px 20px;
+    background:linear-gradient(
+        rgba(247,244,238,.9),
+        rgba(247,244,238,.95)
+    );
 }
 
 .hero img{
@@ -63,21 +67,26 @@ nav a:hover{
 .hero h1{
     font-size:4rem;
     margin-bottom:15px;
+    color:#8a6b12;
+    text-shadow:2px 2px 8px rgba(0,0,0,.1);
 }
 
 .hero p{
-    font-size:1.2rem;
+    font-size:1.3rem;
     margin-bottom:30px;
+    color:#555;
 }
 
 .btn{
     display:inline-block;
-    padding:14px 30px;
+    padding:16px 36px;
     background:#c49b32;
     color:white;
     text-decoration:none;
-    border-radius:8px;
+    border-radius:50px;
+    font-weight:bold;
     transition:.3s;
+    box-shadow:0 4px 15px rgba(196,155,50,.3);
 }
 
 .btn:hover{
@@ -138,6 +147,95 @@ footer{
     color:white;
 }
 
+/* ===== 社課時間 ===== */
+
+#schedule .card{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+#schedule h3{
+    color:#8a6b12;
+    margin-top:25px;
+    margin-bottom:10px;
+}
+
+#schedule p{
+    font-size:1.1rem;
+}
+
+/* ===== FAQ ===== */
+
+#faq .card{
+    text-align:left;
+}
+
+#faq h3{
+    color:#8a6b12;
+    margin-bottom:12px;
+}
+
+#faq p{
+    line-height:1.8;
+}
+
+/* ===== 聯絡我們按鈕效果 ===== */
+
+.contact-box a{
+    transition:.3s;
+}
+
+.contact-box a:hover{
+    transform:translateY(-5px);
+    color:#8a6b12;
+}
+
+/* ===== 社徽動畫 ===== */
+
+.hero img{
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* 課程表 */
+
+.schedule-table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+}
+
+.schedule-table th{
+    background:#c49b32;
+    color:white;
+    padding:15px;
+}
+
+.schedule-table td{
+    padding:15px;
+    border:1px solid #ddd;
+}
+
+.schedule-table tr:nth-child(even){
+    background:#faf8f2;
+}
+
 @media(max-width:768px){
 
     nav{
@@ -156,5 +254,9 @@ footer{
 
     .hero img{
         width:160px;
+    }
+
+    .schedule-box{
+        grid-template-columns:1fr;
     }
 }
