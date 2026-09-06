@@ -147,20 +147,23 @@ section h2{
 
 .contact-box{
     display:flex;
-    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     gap:20px;
-    max-width:500px;
+    flex-wrap:wrap;
     margin:auto;
 }
 
 .contact-box a{
+    display:inline-block;
     background:white;
-    padding:20px;
+    padding:18px 24px;
     border-radius:12px;
     text-decoration:none;
     text-align:center;
     color:#222;
     box-shadow:0 4px 12px rgba(0,0,0,.08);
+    min-width:240px;
 }
 
 footer{
@@ -259,6 +262,33 @@ footer{
     background:#faf8f2;
 }
 
+/* 活動照片 */
+
+.gallery{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,.1);
+
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
 @media(max-width:768px){
 
     nav{
@@ -281,5 +311,9 @@ footer{
 
     .schedule-box{
         grid-template-columns:1fr;
+    }
+
+    .contact-box{
+        flex-direction:column;
     }
 }
