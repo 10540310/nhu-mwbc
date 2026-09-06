@@ -93,6 +93,24 @@ nav a:hover{
     transform:translateY(-3px);
 }
 
+/* 首頁特色項目 */
+
+.hero-features{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.hero-features span{
+    background:white;
+    padding:12px 20px;
+    border-radius:30px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    font-weight:600;
+}
+
 section{
     padding:80px 10%;
 }
@@ -101,6 +119,11 @@ section h2{
     text-align:center;
     margin-bottom:40px;
     color:#8a6b12;
+}
+
+#why h3{
+    color:#8a6b12;
+    margin-bottom:12px;
 }
 
 .cards{
