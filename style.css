@@ -52,10 +52,16 @@ nav a:hover{
 .hero{
     text-align:center;
     padding:120px 20px;
-    background:linear-gradient(
-        rgba(247,244,238,.9),
-        rgba(247,244,238,.95)
-    );
+
+    background:
+    linear-gradient(
+        rgba(247,244,238,.85),
+        rgba(247,244,238,.9)
+    ),
+    url("assets/banner.jpg");
+
+    background-size:cover;
+    background-position:center;
 }
 
 .hero h1{
@@ -271,25 +277,22 @@ footer{
     display:grid;
     grid-template-columns:
     repeat(auto-fit,minmax(250px,1fr));
-
     gap:20px;
+}
+
+.gallery a{
+    display:block;
+    overflow:hidden;
+    border-radius:15px;
 }
 
 .gallery img{
     width:100%;
     height:250px;
     object-fit:cover;
-
     border-radius:15px;
-
-    box-shadow:
-    0 4px 12px rgba(0,0,0,.1);
-
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
     transition:.3s;
-}
-
-.gallery img:hover{
-    transform:scale(1.03);
 }
 
 @media(max-width:768px){
