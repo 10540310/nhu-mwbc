@@ -295,6 +295,62 @@ footer{
     transition:.3s;
 }
 
+/* 圖片輪播 */
+
+.slider{
+    position:relative;
+    max-width:900px;
+    height:450px;
+    margin:auto;
+    overflow:hidden;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
+}
+
+.slide{
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:0;
+    transition:opacity 1s ease;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.prev,
+.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+
+    background:rgba(0,0,0,.4);
+    color:white;
+    border:none;
+
+    width:45px;
+    height:45px;
+
+    font-size:24px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.prev{
+    left:15px;
+}
+
+.next{
+    right:15px;
+}
+
 @media(max-width:768px){
 
     nav{
