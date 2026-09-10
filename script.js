@@ -1,6 +1,9 @@
 console.log("南華中智佛學社網站啟動成功");
 
-let slides = document.querySelectorAll(".slide");
+const slides = document.querySelectorAll(".slide");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
 let currentSlide = 0;
 
 function showSlide(index){
@@ -34,7 +37,9 @@ function prevSlide(){
     showSlide(currentSlide);
 }
 
-document.querySelector(".next").addEventListener("click", nextSlide);
-document.querySelector(".prev").addEventListener("click", prevSlide);
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+
+showSlide(0);
 
 setInterval(nextSlide, 5000);
