@@ -363,15 +363,20 @@ footer{
     nav ul{
         flex-wrap:wrap;
         justify-content:center;
-        gap:10px;
+        gap:8px;
+        font-size:14px;
     }
 
     .hero h1{
         font-size:2rem;
     }
 
+    .hero p{
+        font-size:1rem;
+    }
+
     .hero img{
-        width:260px;
+        width:220px;
     }
 
     .schedule-box{
@@ -386,4 +391,21 @@ footer{
         width:100%;
         max-width:320px;
     }
+
+    /* 圖片輪播 */
+
+    .slider{
+        height:220px;
+    }
+
+    .slide{
+        height:220px;
+    }
+
+    /* 活動照片 */
+
+    .gallery img{
+        height:200px;
+    }
+
 }
